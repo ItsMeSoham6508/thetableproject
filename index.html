@@ -94,6 +94,15 @@
         font-size: 4rem;
       }
     </style>
+
+    <script>
+      function switchPage (id) {
+        const section = document.getElementById(id);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    </script>
   </head>
   <body>
     <nav
@@ -124,15 +133,15 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="index.html"
-                >Home</a
+                >The Table Project</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link custom-link" href="#">About Us</a>
+            <!-- <li class="nav-item">
+              <a class="nav-link custom-link" href="about.html">About Us</a>
             </li>
             <li class="nav-item">
               <a class="nav-link custom-link" href="#">Contact</a>
-            </li>
+            </li> -->
             <!-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Dropdown
@@ -161,13 +170,25 @@
         <h1 style="padding-top: 20px; padding-bottom: 20px">
           The Table Project
         </h1>
-        <p style="padding-top: 10px; padding-bottom: 20px">
-          Everyone deserves a seat at the table. At The Table Project, we
-          believe small acts of care can make a big difference. From seasonal
-          comfort bags to handwritten notes, we’re building quiet moments of
-          kindness for those who need it most — one neighbor at a time.
+        <p
+          style="
+            font-size: 30px;
+            font-style: italic;
+            letter-spacing: 1.2px;
+            padding-top: 10px;
+            padding-bottom: 20px;
+          "
+        >
+          Everyone deserves a seat at the table
         </p>
-        <button
+
+        <p style="padding-top: 10px; padding-bottom: 20px">
+          At The Table Project, we believe small acts of care can make a big
+          difference. From seasonal comfort bags to handwritten notes, we’re
+          building quiet moments of kindness for those who need it most — one
+          neighbor at a time.
+        </p>
+        <button onclick="switchPage('about')"
           style="
             background-color: #fff;
             color: #2c4966;
@@ -185,5 +206,105 @@
         </button>
       </div>
     </div>
+
+    <section style="background-color: #2c4966; padding: 150px 0" id='about'>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card shadow-sm" style="border: none">
+              <div class="card-body">
+                <h5 class="card-title">What We Do</h5>
+                <p class="card-text" style="line-height: 1.9">
+                  The Table Project creates simple, meaningful outreach for
+                  overlooked members of our communities. We put together care
+                  packages, write letters, and organize small efforts that
+                  remind people they’re not alone. Our work is quiet by design —
+                  thoughtful, consistent, and rooted in real human connection.
+                </p>
+                <!-- <a href="about.html" class="btn btn-primary">About Us</a> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card shadow-sm" style="border: none">
+              <div class="card-body">
+                <h5 class="card-title">Why We Do It</h5>
+                <p class="card-text" style="line-height: 1.9">
+                  We believe that kindness doesn’t need to be loud to matter.
+                  There are too many people who go unseen — kids, seniors,
+                  families in transition. We exist to remind them someone’s
+                  thinking of them. That’s it. No big statements, just simple
+                  acts of care that help people feel human again.
+                </p>
+                <!-- <a href="about.html" class="btn btn-primary">About Us</a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br /><br />
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card shadow-sm" style="border: none">
+              <div class="card-body">
+                <h5 class="card-title">How You Can Help</h5>
+                <p class="card-text" style="line-height: 1.9">
+                  At The Table Project, every bit of support counts. Whether
+                  you’re donating your time to pack care packages, writing notes
+                  of encouragement, or simply spreading the word, you’re making
+                  a difference. We’re always looking for volunteers to join our
+                  efforts, and every small action helps create a ripple of
+                  kindness in the community. Join us in showing others they
+                  matter — in ways both big and small.
+
+                  <br><br>
+                  Fill in this form to let us know about you and how you can contribute. We'll respond as soon as we can!
+                </p>
+
+                <a href="https://forms.gle/YmWwkugDJ5Gu3kpU6" target="_blank" class="btn btn-primary">Get Involved</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card shadow-sm" style="border: none">
+              <div class="card-body">
+                <h5 class="card-title">Where We Are</h5>
+                <p class="card-text" style="line-height: 1.9">
+                  Based in Ellijay, GA, The Table Project serves local communities through a network of volunteers committed to bringing small moments of care to those in need. Carolyn Mae Whitmore, our founder, works closely with local schools, shelters, and churches to identify where help is most needed. While our efforts are based here, the message of kindness and community stretches beyond borders.
+                </p>
+                <!-- <a href="about.html" class="btn btn-primary">About Us</a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-white py-4" style="background-color: #2c4966">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Contact Us</h5>
+            <p>
+              The Table Project<br />
+              Ellijay, GA<br />
+              Email: contact.thetableproject@gmail.com
+<br />
+              Phone: 424-634-2765
+            </p>
+          </div>
+          <div class="col-md-6">
+            <h5>About</h5>
+            <p>
+              The Table Project is dedicated to creating small acts of kindness that make a big difference. Join us in spreading care and compassion in our community.
+            </p>
+          </div>
+        </div>
+        <div class="text-center mt-5">
+          <!-- <p class="mb-0">&copy; 2025 The Table Project. All rights reserved.</p> -->
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
